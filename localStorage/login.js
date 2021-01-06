@@ -1,5 +1,6 @@
 function myFunc() {
-  //   let c = document.getElementById("username");
-  let c = 5;
-  console.log(c);
+  let c = document.querySelector("#username").value;
+  localStorage.setItem("username", c);
+  let p = document.querySelector("#password").value;
+  localStorage.setItem("password", p);
 }
