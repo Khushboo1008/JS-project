@@ -1,6 +1,6 @@
 function myFunc() {
-  let c = document.querySelector("#username").value;
+  let c = document.getElementById("username").value;
   localStorage.setItem("username", c);
-  let p = document.querySelector("#password").value;
+  let p = document.getElementById("password").value;
   localStorage.setItem("password", p);
 }
