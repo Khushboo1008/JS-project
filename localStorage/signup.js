@@ -1,16 +1,27 @@
 function submitForm() {
-  // let arr = "";
-  if (localStorage.getItem("allUserDetails", "{}")) {
-    var myObj = {
-      name: document.getElementById("name").value,
-      username: document.getElementById("username").value,
-      email: document.getElementById("email").value,
-      password: document.getElementById("password").value,
-      confirmPassword: document.getElementById("confirm-password").value,
-    };
-    // arr += myObj;
-    // let newObj = JSON.parse(myObj);
-    // console.log(newObj);
-    // localStorage.setItem("allUserDetails", JSON.stringify(arr));
-  }
+  let name = document.getElementById("name").value;
+  let username = document.getElementById("username").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let confirmPassword = document.getElementById("password").value;
+
+  addNewUser(name, username, email, password, confirmPassword);
+}
+
+function addNewUser(name, username, email, password, confirmPassword) {
+  let allSignupDetails = JSON.parse(
+    localStorage.getItem("allSignupDetails") || "[]"
+  );
+
+  let currentSignup = {
+    name: name,
+    username: username,
+    email: email,
+    password: password,
+    confirmPassword: confirmPassword,
+  };
+
+  allSignupDetails.push(currentSignup);
+  console.log(allSignupDetails);
+  localStorage.setItem("allSignupDetails", JSON.stringify(allSignupDetails));
 }

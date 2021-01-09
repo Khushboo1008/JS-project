@@ -1,4 +1,3 @@
-
 function myFunc() {
   // var Obj={
   //   username: document.getElementById("username").value,
@@ -6,14 +5,16 @@ function myFunc() {
   // }
   // localStorage.setItem('allUserDetails', JSON.stringify(Obj));
   // https://www.c-sharpcorner.com/blogs/store-multiple-values-in-localstorage-apin-in-html-5
-  username= document.getElementById("username").value;
-  password= document.getElementById("password").value;
+  username = document.getElementById("username").value;
+  password = document.getElementById("password").value;
 
-  addNewObject(username,password);
+  addNewObject(username, password);
 }
-function addNewObject(username, password){
-  let allUserDetails = JSON.parse(localStorage.getItem("allUserDetails") || "[]");
-    
+function addNewObject(username, password) {
+  let allUserDetails = JSON.parse(
+    localStorage.getItem("allUserDetails") || "[]"
+  );
+
   let currentUser = {
     user: username,
     pass: password,
