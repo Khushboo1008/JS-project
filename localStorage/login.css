@@ -24,4 +24,6 @@ input {
 }
 button {
   margin: 15%;
+  background-color: pink;
+  font-size: large;
 }
