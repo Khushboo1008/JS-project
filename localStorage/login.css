@@ -1,3 +1,6 @@
+body {
+  background-color: pink;
+}
 .greeting {
   position: relative;
   left: 47%;
@@ -13,6 +16,7 @@
   position: relative;
   left: 30%;
   font-size: xx-large;
+  background: blueviolet;
 }
 input {
   padding: 3%;
