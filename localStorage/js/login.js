@@ -15,6 +15,5 @@ function addNewObject(username, password) {
   };
 
   allUserDetails.push(currentUser);
-
   localStorage.setItem("allUserDetails", JSON.stringify(allUserDetails));
 }
