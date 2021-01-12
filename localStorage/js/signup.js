@@ -3,7 +3,7 @@ function submitForm() {
   let username = document.getElementById("username").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
-  let confirmPassword = document.getElementById("password").value;
+  let confirmPassword = document.getElementById("confirm-password").value;
 
   addNewUser(name, username, email, password, confirmPassword);
 }
@@ -22,6 +22,5 @@ function addNewUser(name, username, email, password, confirmPassword) {
   };
 
   allSignupDetails.push(currentSignup);
-  console.log(allSignupDetails);
   localStorage.setItem("allSignupDetails", JSON.stringify(allSignupDetails));
 }
