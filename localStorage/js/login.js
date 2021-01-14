@@ -13,18 +13,18 @@ function addNewObject(username, password) {
     username: username,
     password: password,
   };
+
   let loginCheck = JSON.parse(localStorage.getItem("allSignupDetails"));
   console.log(loginCheck.length);
-  for(let i=0;i<loginCheck.length;i++)
-  {
-    if(loginCheck[i].username==currentUser.username && loginCheck[i].password==currentUser.password){
+  for (let i = 0; i < loginCheck.length; i++) {
+    if (
+      loginCheck[i].username == currentUser.username &&
+      loginCheck[i].password == currentUser.password
+    ) {
       allUserDetails.push(currentUser);
       localStorage.setItem("allUserDetails", JSON.stringify(allUserDetails));
-      // location.href="./../html/dashboard.html";
+      window.location.href = "dashboard.html";
       break;
     }
   }
-  location.href="./../html/dashboard.html";
-  // allUserDetails.push(currentUser);
-  // localStorage.setItem("allUserDetails", JSON.stringify(allUserDetails));
 }

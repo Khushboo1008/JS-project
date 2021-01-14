@@ -6,36 +6,34 @@
     <title>LOGIN</title>
     <title>Document</title>
     <link rel="stylesheet" href="./../css/login.css" />
+    <script src="./../js/login.js"></script>
   </head>
   <body>
     <h2 class="greeting">HEY YO!</h2>
     <div class="box">
       <h3 class="heading">LOGIN</h3>
-
-      <form class="inner">
-        <div class="inner1">
-          <input
-            type="text"
-            name="Username"
-            id="username"
-            placeholder="Enter Username"
-          />
-        </div>
-        <div>
-        <div class="inner2">
-          <input
-            type="password"
-            Password="Password"
-            id="password"
-            placeholder="Enter Password"
-          />
-        </div>
-      </form>
+      <div>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          autocomplete="on"
+          placeholder="Enter Username"
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          autocomplete="on"
+          placeholder="Enter Password"
+        />
+      </div>
       <br />
       <div class="btn">
-        <button onclick="myFunc()">Login</button>
+        <button type="submit" onclick="myFunc()">Login</button>
       </div>
     </div>
-    <script src="./../js/login.js"></script>
   </body>
 </html>
