@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-</head>
-<body>
-    <h1>Hello </h1>
-</body>
+    <script src="./../js/login.js"></script>
+    <!-- <link rel="stylesheet" href=""> -->
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <style>
+          .dropdown {
+            position: absolute;
+            display: inline-block;
+            left: 90%;
+          }
+
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 15px 20px;
+
+            z-index: 1;
+          }
+          .dropdown-content button {
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            width: 80%;
+          }
+
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+          .content {
+            text-align: center;
+          }
+          .dashbutton {
+            width: 80px;
+            position: relative;
+            /* top: -50%; */
+            height: 50px;
+            left: 0%;
+            bottom: -50%;
+          }
+        </style>
+      </head>
+      <body>
+        <!-- <h2>hi username</h2> -->
+        <!-- <p>Move the mouse over the text below to open the dropdown content.</p> -->
+
+        <div class="dropdown">
+          <span><strong>MY ACCOUNT</strong></span>
+          <div class="dropdown-content">
+            <button>profile</button>
+            <button>Log out</button>
+            <button>Delete</button>
+          </div>
+        </div>
+      </body>
+    </html>
+  </head>
+  <body class="content">
+    <h1>hello username</h1>
+    <h1>Welcome to the k3 website</h1>
+    <button class="dashbutton">HOME</button>
+  </body>
 </html>
