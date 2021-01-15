@@ -15,14 +15,12 @@ function addNewObject(username, password) {
   };
 
   let loginCheck = JSON.parse(localStorage.getItem("allSignupDetails"));
-  console.log(loginCheck.length);
   for (let i = 0; i < loginCheck.length; i++) {
     if (
       loginCheck[i].username == currentUser.username &&
       loginCheck[i].password == currentUser.password
     ) {
-      allUserDetails.push(currentUser);
-      localStorage.setItem("allUserDetails", JSON.stringify(allUserDetails));
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));
       window.location.href = "dashboard.html";
       break;
     }
