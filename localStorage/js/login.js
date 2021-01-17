@@ -1,7 +1,6 @@
 function myFunc() {
   username = document.getElementById("username").value;
   password = document.getElementById("password").value;
-
   addNewObject(username, password);
 }
 function addNewObject(username, password) {
@@ -13,7 +12,7 @@ function addNewObject(username, password) {
     username: username,
     password: password,
   };
-
+  let flag = false;
   let loginCheck = JSON.parse(localStorage.getItem("allSignupDetails"));
   for (let i = 0; i < loginCheck.length; i++) {
     if (
@@ -23,6 +22,9 @@ function addNewObject(username, password) {
       localStorage.setItem("currentUser", JSON.stringify(currentUser));
       window.location.href = "dashboard.html";
       break;
+    } else {
+      flag = true;
     }
   }
+  if (flag) window.alert("Incorrect Details.");
 }
